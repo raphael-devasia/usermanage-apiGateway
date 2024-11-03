@@ -40,7 +40,7 @@ const userClient = new userProto.UserService(
 // Routes for user authentication
 app.post("/register", (req, res) => {
     authClient.Register(req.body, (error, response) => {
-        console.log(response)
+        
 
         if (!response.success) {
             return res.status(400).json({
