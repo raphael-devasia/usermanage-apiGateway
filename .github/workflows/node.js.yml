@@ -40,4 +40,4 @@ jobs:
       uses: docker/build-push-action@v6
       with:
         push: true
-        tags: jaydee47/usermanagement-microservice
+        tags: jaydee47/usermanagement-microservice:latest
