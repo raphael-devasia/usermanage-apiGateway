@@ -19,8 +19,10 @@ app.use(
 app.use(bodyParser.json())
 
 // Load gRPC clients
-const authProtoPath = path.join(__dirname, "../auth-service/proto/auth.proto")
-const userProtoPath = path.join(__dirname, "../user-service/proto/user.proto")
+// const authProtoPath = path.join(__dirname, "../auth-service/proto/auth.proto")
+// const userProtoPath = path.join(__dirname, "../user-service/proto/user.proto")
+const authProtoPath = path.join(process.env.PROTO_PATH, "auth.proto")
+const userProtoPath = path.join(process.env.PROTO_PATH, "user.proto")
 
 const authPackageDefinition = protoLoader.loadSync(authProtoPath, {})
 const userPackageDefinition = protoLoader.loadSync(userProtoPath, {})
