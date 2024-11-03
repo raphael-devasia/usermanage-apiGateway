@@ -27,8 +27,7 @@ Thumbs.db
 *.pb.ts
 
 # API Gateway & service specific files
-auth-service/proto/*.js
-user-service/proto/*.js
+
 
 # Optional: Build output and compiled files
 dist/
