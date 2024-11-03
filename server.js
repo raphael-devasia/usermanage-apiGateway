@@ -38,11 +38,13 @@ const userClient = new userProto.UserService(
     "localhost:50052",
     grpc.credentials.createInsecure()
 )
+console.log(authClient)
 
 // Routes for user authentication
 app.post("/register", (req, res) => {
     authClient.Register(req.body, (error, response) => {
         
+console.log(response)
 
         if (!response.success) {
             return res.status(400).json({
@@ -93,6 +95,8 @@ app.put("/user", (req, res) => {
         res.json(response)
     })
 })
+
+
 
 app.get("/getUser", (req, res) => {
     const authHeader = req.headers.authorization
